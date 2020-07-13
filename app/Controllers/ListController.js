@@ -42,5 +42,10 @@ export default class ListController {
     _drawLists()
   }
 
+  //unfinished //
+  deleteItem(listId, itemIndex) {
+    console.log(listId, itemIndex)
+  }
+
 
 }

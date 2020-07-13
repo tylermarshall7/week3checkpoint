@@ -21,9 +21,11 @@ class ListService {
   deleteList(id) {
     let index = _store.State.lists.findIndex(rawListData => rawListData.id == id)
 
-    window.confirm("delete this list?")
+    if (window.confirm("delete this list?")) {
+      
     _store.State.lists.splice(index, 1)
     _store.saveState()
+    }
   }
 
   // unfinished //
