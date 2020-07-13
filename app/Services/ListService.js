@@ -26,6 +26,14 @@ class ListService {
     _store.saveState()
   }
 
+  // unfinished //
+  deleteItem() {
+
+    window.confirm("delete this item?")
+    // ?????
+    _store.saveState()
+  }
+
 }
 
 
