@@ -19,14 +19,14 @@ _loadState();
 
 class Store {
 
-addItem(foundItemIndex, rawItemData) {
-  _state.items[foundItemIndex].items.push(rawItemData)
-}
+  addList(currentList) {
+    _state.lists.push(currentList)
+  }
 
-addList(currentList) {
-  _state.lists.push(currentList)
-}
-  
+  addItem(foundListIndex, rawItemData) {
+    _state.lists[foundListIndex].items.push(rawItemData)
+  }
+
   /**
    * Provides access to application state data
    */

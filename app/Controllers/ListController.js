@@ -24,16 +24,21 @@ export default class ListController {
       name: formData.listName.value
     }
 
-    _listsService.addList(rawListData)
     formData.reset()
+    _listsService.addList(rawListData)
     _drawLists()
   }
 
   addItem(event, listId) {
     event.preventDefault();
-    let rawItemData = event.target.itemName.target
+    let rawItemData = event.target.itemName.value
     _listsService.addItem(rawItemData, listId)
     event.target.reset()
+    _drawLists()
+  }
+
+  deleteList(id) {
+    _listsService.deleteList(id)
     _drawLists()
   }
 

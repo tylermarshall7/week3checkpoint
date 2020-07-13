@@ -5,7 +5,11 @@ import List from "../Models/List.js";
 //Public
 class ListService {
 
-
+  addList(rawListData) {
+    let currentList = new List(rawListData)
+    _store.addList(currentList)
+    _store.saveState()
+  }
 
   addItem(rawItemData, listId) {
     let foundListIndex = _store.State.lists.findIndex(list => list.id == listId)
@@ -14,9 +18,11 @@ class ListService {
     _store.saveState()
   }
 
-  addList(rawListData) {
-    let currentList = new List(rawListData)
-    _store.addList(currentList)
+  deleteList(id) {
+    let index = _store.State.lists.findIndex(rawListData => rawListData.id == id)
+
+    window.confirm("delete this list?")
+    _store.State.lists.splice(index, 1)
     _store.saveState()
   }
 

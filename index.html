@@ -1,58 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-    />
-    <link rel="stylesheet" href="assets/style.css" />
-    <title>TaskMaster</title>
-  </head>
 
-  <body>
-    
-    <header class= "container-fluid text-center text-dark">
-      <div class= "row">
-        <div class="col p-5">
-          <h1>TaskMaster</h1>
-        </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="assets/style.css" />
+  <title>TaskMaster</title>
+</head>
+
+<body>
+
+  <header class="container-fluid text-center text-dark">
+    <div class="row">
+      <div class="col p-5">
+        <h1>TaskMaster</h1>
       </div>
-    </header>
+    </div>
+  </header>
 
-    <main class= "containter-fluid">
-      <div class= "row justify-content-center">
-        <div class="col-4">
-          <form onsubmit="app.listController.addList(event)">
-            <div class="form-group">
-              <label for="listName">List Name</label>
-              <input type="text" name="listName" class="form-control" placeholder="Type in list title">
-            </div>
-              <button type ="submit" class= "btn btn-outline-success">Add List</button>
-            </div>
-          </form>
-        </div>
+  <main class="container-fluid">
+    <div class="row justify-content-center">
+      <div class="col-4">
+        <form onsubmit="app.listController.addList(event)">
+          <div class="form-group">
+            <input type="text" name="listName" class="form-control" placeholder="Type in list title">
+          </div>
+          <button type="submit" class="btn btn-outline-success">Add List</button>
       </div>
+      </form>
+    </div>
+    </div>
 
-      <div class="row" id="lists">
-        <div class="col-3">
-          <h1>list name</h1>
-          <form onsubmit="app.listController.addItem(event)">
-            <div class="form-group">
-              <label for="itemName">Item Name</label>
-              <input type="text" name="itemName" class="form-control" placeholder= "Type in item">
-            </div>
-            <button type = "submit" class= "btn btn-outline-success">Add Item</button>
-          </form>
-        </div>
-      </div>
+    <div class="row" id="lists">
+    </div>
 
 
-    </main>
+  </main>
 
 
-    <script src="app/main.js" type="module"></script>
-  </body>
+  <script src="app/main.js" type="module"></script>
+</body>
+
 </html>
