@@ -11,13 +11,22 @@ let _state = {
 function _loadState() {
   let data = JSON.parse(localStorage.getItem("TaskMaster"));
   if (data) {
-    data.lists = data.lists.map(l => new List(l));
+    data.lists = data.lists.map(rawListData => new List(rawListData));
     _state = data;
   }
 }
 _loadState();
 
 class Store {
+
+addItem(foundItemIndex, rawItemData) {
+  _state.items[foundItemIndex].items.push(rawItemData)
+}
+
+addList(currentList) {
+  _state.lists.push(currentList)
+}
+  
   /**
    * Provides access to application state data
    */
